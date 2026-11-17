@@ -58,6 +58,17 @@ git push -u origin main
 | 호텔조리과 (메뉴·원가) | https://datathinkinglab.github.io/sinansan-ai-training/호텔조리/신안산대학교_호텔조리과_AI활용특강_슬라이드.html |
 | 호텔조리과 (빅데이터) | https://datathinkinglab.github.io/sinansan-ai-training/호텔조리/신안산대학교_호텔조리과_빅데이터특강_슬라이드.html |
 
+## 단축 링크 (TinyURL)
+
+| 페이지 | 단축 링크 |
+|---|---|
+| 메인 | https://tinyurl.com/sau-ai |
+| 뷰티디자인과 | https://tinyurl.com/sau-ai-beauty |
+| 호텔제과제빵과 | https://tinyurl.com/sau-ai-bakery |
+| 호텔조리과 (메뉴·원가) | https://tinyurl.com/sau-ai-cook |
+| 호텔조리과 (빅데이터) | https://tinyurl.com/sau-ai-bigdata |
+| 공통 AI 윤리·보안 | https://tinyurl.com/sau-ai-ethics |
+
 ## 4. 배포 후 확인할 것
 - [ ] 메인에서 ← → 로 4장이 넘어가는지
 - [ ] 학과 카드의 **강의 입장**, **공통 윤리·보안** 버튼이 열리는지
