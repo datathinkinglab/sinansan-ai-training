@@ -104,6 +104,19 @@
       if (/googtrans=/.test(document.cookie)) setCookie('', -1);
     } else {
       setCookie('/ko/' + cur, 1);
+      /* 제목을 단어별로 쪼개는 애니메이션(data-kinetic)을 끕니다.
+         쪼개진 단어를 하나씩 번역하면 문장이 어색해지므로, 제목을 한 문장으로 번역하게 합니다. */
+      var kin = function (root) {
+        if (root.nodeType !== 1) return;
+        if (root.hasAttribute('data-kinetic')) root.removeAttribute('data-kinetic');
+        var list = root.querySelectorAll ? root.querySelectorAll('[data-kinetic]') : [];
+        for (var i = 0; i < list.length; i++) list[i].removeAttribute('data-kinetic');
+      };
+      var mo = new MutationObserver(function (ms) {
+        ms.forEach(function (m) { for (var i = 0; i < m.addedNodes.length; i++) kin(m.addedNodes[i]); });
+      });
+      mo.observe(document.documentElement, { childList: true, subtree: true });
+      document.addEventListener('DOMContentLoaded', function () { kin(document.documentElement); mo.disconnect(); });
       window.sauGT = function () {
         try {
           new google.translate.TranslateElement({
